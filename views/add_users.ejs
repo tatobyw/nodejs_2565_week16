@@ -1,0 +1,47 @@
+<%- include('./layout/head') %> 
+<%- include('./layout/navbar') %> 
+
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-md-10 mx-auto mt-5">
+
+            <div class="card shadow">
+                <div class="card-header text-white bg-dark">
+                    <h3>Add New User
+                        <a href="/" class="btn btn-light btn-sm float-end">Back</a>
+                    </h3>
+                </div>
+                <div class="card-body p-4">
+                    <form action="/add" method="post" enctype="multipart/form-data">
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Enter name" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter Email" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Phone</label>
+                            <input type="text" name="phone" class="form-control" placeholder="Enter phone" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="" class="form-label">Selected Image</label>
+                            <input type="file" name="image" class="form-control" required />
+                        </div>
+
+                        <div class="mb-3 d-grid">
+                            <input type="submit" class="btn btn-dark" value="Add User">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include('./layout/footer') %> 
